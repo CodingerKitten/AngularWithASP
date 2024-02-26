@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-lg" [ngClass]="{ 'scrolled': scrolled }">
+  <div class="container">
+    <a class="navbar-brand" href="#home"><img src="assets/img/logo.svg" alt="Logo" /></a>
+    <button class="navbar-toggler" type="button" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#home" [class.active]="activeLink === 'home'" (click)="onUpdateActiveLink('home')">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#skills" [class.active]="activeLink === 'skills'" (click)="onUpdateActiveLink('skills')">Skills</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#projects" [class.active]="activeLink === 'projects'" (click)="onUpdateActiveLink('projects')">Projects</a>
+        </li>
+      </ul>
+      <div class="navbar-text">
+        <div class="social-icon">
+          <a href="#"><img src="assets/img/nav-icon1.svg" alt="" /></a>
+          <a href="#"><img src="assets/img/nav-icon2.svg" alt="" /></a>
+          <a href="#"><img src="assets/img/nav-icon3.svg" alt="" /></a>
+        </div>
+        <button class="vvd" (click)="connect()"><span>Let's Connect</span></button>
+      </div>
+    </div>
+  </div>
+</nav>
