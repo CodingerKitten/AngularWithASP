@@ -38,5 +38,19 @@ namespace AngularWithASP.Controllers
 
             return CreatedAtAction("GetBook", new { id = book.Id }, book);
         }
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> RemoveBook(int id)
+        {
+            var book = await _context.Books.FindAsync(id);
+            if (book == null)
+            {
+                return NotFound(); // Returns a 404 if the book is not found
+            }
+
+            _context.Books.Remove(book);
+            await _context.SaveChangesAsync();
+
+            return NoContent(); // Returns a 204 No Content response on successful deletion
+        }
     }
 }

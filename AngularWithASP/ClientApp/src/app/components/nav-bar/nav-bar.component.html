@@ -7,19 +7,19 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav me-auto">
         <li class="nav-item">
-          <a class="nav-link" href="#home" [class.active]="activeLink === 'home'" (click)="onUpdateActiveLink('home')">Home</a>
+          <a class="nav-link" routerLink="/home" routerLinkActive="active" (click)="onUpdateActiveLink('home')">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#skills" [class.active]="activeLink === 'skills'" (click)="onUpdateActiveLink('skills')">Skills</a>
+          <a class="nav-link" routerLink="/book-list" routerLinkActive="active" (click)="onUpdateActiveLink('skills')">Skills</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#projects" [class.active]="activeLink === 'projects'" (click)="onUpdateActiveLink('projects')">Projects</a>
+          <a class="nav-link" routerLink="/" routerLinkActive="active" (click)="onUpdateActiveLink('projects')">Projects</a>
         </li>
       </ul>
       <div class="navbar-text">
         <div class="social-icon">
           <a href="#"><img src="assets/img/nav-icon1.svg" alt="" /></a>
-          <a href="#"><img src="assets/img/nav-icon2.svg" alt="" /></a>
+          <a href="#"><img src="assets/img/nav-icon2.svg" alt="" /></a> 
           <a href="#"><img src="assets/img/nav-icon3.svg" alt="" /></a>
         </div>
         <button class="vvd" (click)="connect()"><span>Let's Connect</span></button>

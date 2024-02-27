@@ -1,0 +1,12 @@
+<div class="book-remove-container">
+  <h2>Remove a Book</h2>
+  <form (ngSubmit)="onRemoveBook()">
+    <div class="form-group">
+      <label for="bookId">Book ID:</label>
+      <input type="number" class="form-control" id="bookId" [(ngModel)]="bookIdToRemove" name="bookId" required>
+    </div>
+    <button type="submit" class="btn btn-danger">Remove Book</button>
+  </form>
+  <!--<input type="number" [(ngModel)]="bookIdToRemove" placeholder="Enter book ID">
+  <button (click)="onRemoveBook()">Remove Book</button>-->
+</div>
