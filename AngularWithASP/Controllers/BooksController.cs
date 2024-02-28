@@ -50,7 +50,7 @@ namespace AngularWithASP.Controllers
             _context.Books.Remove(book);
             await _context.SaveChangesAsync();
 
-            return NoContent(); // Returns a 204 No Content response on successful deletion
+            return NoContent(); // Returns a 204 No Content
         }
     }
 }
