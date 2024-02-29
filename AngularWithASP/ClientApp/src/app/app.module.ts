@@ -17,6 +17,8 @@ import { TrackVisibilityDirective } from './components/track-visibility/track-vi
 import { AppRoutingModule } from './app-routing.module';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { BookRemoveComponent } from './components/book-remove/book-remove.component';
+import { BookEditComponent } from './components/book-edit/book-edit.component';
+import { BookFindComponent } from './components/book-find/book-find.component';
 
 
 @NgModule({
@@ -33,6 +35,8 @@ import { BookRemoveComponent } from './components/book-remove/book-remove.compon
     TrackVisibilityDirective,
     ProjectsComponent,
     BookRemoveComponent,
+    BookEditComponent,
+    BookFindComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
