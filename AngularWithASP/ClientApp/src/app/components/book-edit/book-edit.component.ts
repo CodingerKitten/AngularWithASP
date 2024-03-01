@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { BookService } from '../../services/book.service';
 import { Book } from '../../models/book';
 
@@ -8,7 +8,7 @@ import { Book } from '../../models/book';
   styleUrls: ['./book-edit.component.css']
 })
 export class BookEditComponent implements OnInit {
-  book: Book = { title: '', author: '' };
+  @Input() book!: Book;
 
   constructor(private bookService : BookService) { }
 

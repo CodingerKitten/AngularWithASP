@@ -1,15 +1,18 @@
+<!--<div class="container">
 
-<div class="container">
-  
       <h2 class="text-center">Remove a Book</h2>
       <form (ngSubmit)="onRemoveBook()" class="mt-4">
         <div class="form-group">
           <label for="bookId">Book ID:</label>
           <input type="number" class="form-control" id="bookId" [(ngModel)]="bookIdToRemove" name="bookId" required>
         </div>
-        
+
           <button type="submit" class="btn btn-danger">Remove Book</button>
-        
+
       </form>
-    </div>
- 
+    </div>-->
+<div *ngIf="bookIdToRemove">
+  <p>Remove Book ID: {{ bookIdToRemove }}</p>
+  <button class="btn btn-danger" (click)="removeBook()">Remove Book</button>
+</div>
+

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Book } from '../../models/book';
 import { BookService } from '../../services/book.service';
 
 @Component({
@@ -7,27 +8,25 @@ import { BookService } from '../../services/book.service';
   styleUrls: ['./book-remove.component.css']
 })
 export class BookRemoveComponent implements OnInit {
-
-  bookIdToRemove: number | null = null;
+  @Input() bookIdToRemove: number | null | undefined;
 
   constructor(private bookService : BookService) { }
 
   ngOnInit(): void {
   }
 
-  onRemoveBook(): void {
+  removeBook(): void {
     if (this.bookIdToRemove != null) {
       this.bookService.removeBook(this.bookIdToRemove).subscribe({
         next: (response) => {
           console.log('Book removed successfully', response);
-          this.bookIdToRemove = null; // Optionally reset the property
+          this.bookIdToRemove = null; 
         },
         error: (error) => {
           console.error('There was an error!', error);
         }
       });
     } else {
-      // Optionally handle the case where bookIdToRemove is null (e.g., input not provided)
       console.error('Book ID is required');
     }
   }

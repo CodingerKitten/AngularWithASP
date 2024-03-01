@@ -19,6 +19,11 @@ export class BookService {
     return this.http.post<Book>(this.apiUrl, book);
   }
 
+  getBookById(bookId: number): Observable<any> {
+    const url = `${this.apiUrl}/${bookId}`;
+    return this.http.get(url);
+  }
+
   removeBook(bookId: number): Observable<any> {
     const url = `${this.apiUrl}/${bookId}`;
     return this.http.delete(url);

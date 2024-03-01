@@ -1,4 +1,4 @@
-<div class="container">
+<!--<div class="container">
   <div class="row justify-content-center">
     <div class="col-md-6">
       <h2 class="text-center">Edit Book</h2>
@@ -19,4 +19,19 @@
       </form>
     </div>
   </div>
+</div>
+-->
+<div *ngIf="book">
+  <h2>Edit Book</h2>
+  <form (ngSubmit)="editBook()">
+    <div>
+      <label for="title">Title:</label>
+      <input id="title" [(ngModel)]="book.title" name="title" required>
+    </div>
+    <div>
+      <label for="author">Author:</label>
+      <input id="author" [(ngModel)]="book.author" name="author" required>
+    </div>
+    <button type="submit" class="btn btn-success">Save Changes</button>
+  </form>
 </div>

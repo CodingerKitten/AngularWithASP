@@ -1,0 +1,9 @@
+.book-table {
+  background-color: white; /* Ensures the background is white */
+  color: black; /* Ensures text is black */
+}
+
+  /* If you want to ensure all cells have a white background */
+  .book-table td, .book-table th {
+    background-color: white;
+  }
