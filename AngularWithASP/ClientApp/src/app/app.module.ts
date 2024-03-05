@@ -5,7 +5,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HomeComponent } from './components/home/home.component';
 import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
@@ -18,14 +17,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { BookRemoveComponent } from './components/book-remove/book-remove.component';
 import { BookEditComponent } from './components/book-edit/book-edit.component';
-import { BookFindComponent } from './components/book-find/book-find.component';
 import { BookDetailsComponent } from './components/book-details/book-details.component';
+import { BookSearchComponent } from './components/book-search/book-search.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavMenuComponent,
     HomeComponent,
     CounterComponent,
     FetchDataComponent,
@@ -37,8 +35,8 @@ import { BookDetailsComponent } from './components/book-details/book-details.com
     ProjectsComponent,
     BookRemoveComponent,
     BookEditComponent,
-    BookFindComponent,
     BookDetailsComponent,
+    BookSearchComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),

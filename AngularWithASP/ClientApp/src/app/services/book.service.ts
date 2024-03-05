@@ -24,6 +24,15 @@ export class BookService {
     return this.http.get(url);
   }
 
+  getBookByTitle(bookTitle: string): Observable<any> {
+    const url = `${this.apiUrl}/bytitle?titleName=${encodeURIComponent(bookTitle)}`;
+    return this.http.get(url);
+  }
+  getBookByAuthor(bookAuthor: string): Observable<any> {
+    const url = `${this.apiUrl}/byauthor?authorName=${encodeURIComponent(bookAuthor)}`;
+    return this.http.get(url);
+  }
+
   removeBook(bookId: number): Observable<any> {
     const url = `${this.apiUrl}/${bookId}`;
     return this.http.delete(url);
