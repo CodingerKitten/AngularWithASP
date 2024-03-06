@@ -38,7 +38,7 @@ export class BookListComponent implements OnInit {
         this.books = books;
       });
     } else {
-      this.loadInit();
+      this.loadInit(); //calling auto refresh
     }
   }
 

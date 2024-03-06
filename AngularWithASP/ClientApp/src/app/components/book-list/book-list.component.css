@@ -1,9 +1,21 @@
-.book-table {
-  background-color: white; /* Ensures the background is white */
-  color: black; /* Ensures text is black */
+.book-list {
+  margin-top: 0;
+  padding: 260px 0 100px 0;
+  background-image: url('../../../assets/img/banner-bg.png');
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-  /* If you want to ensure all cells have a white background */
+.book-table {
+  background-color: white; 
+  color: black; 
+}
+
   .book-table td, .book-table th {
-    background-color: white;
+    /*background-color: white;*/
   }
+
+.btn-spacing {
+  margin-right: 8px; 
+}

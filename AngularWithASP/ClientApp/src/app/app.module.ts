@@ -19,6 +19,8 @@ import { BookRemoveComponent } from './components/book-remove/book-remove.compon
 import { BookEditComponent } from './components/book-edit/book-edit.component';
 import { BookDetailsComponent } from './components/book-details/book-details.component';
 import { BookSearchComponent } from './components/book-search/book-search.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
 
 
 @NgModule({
@@ -37,6 +39,8 @@ import { BookSearchComponent } from './components/book-search/book-search.compon
     BookEditComponent,
     BookDetailsComponent,
     BookSearchComponent,
+    LoginComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
