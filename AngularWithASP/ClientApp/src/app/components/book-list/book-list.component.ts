@@ -37,7 +37,7 @@ export class BookListComponent implements OnInit {
       this.bookService.getBookByAuthor(this.searchAuthor).subscribe((books: Book[]) => {
         this.books = books;
       });
-    } else {
+     } else {
       this.loadInit(); //calling auto refresh
     }
   }

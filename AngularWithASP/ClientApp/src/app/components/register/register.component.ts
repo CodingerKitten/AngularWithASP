@@ -8,7 +8,9 @@ import { RegisterViewModel } from '../../models/account/register.model';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor() { }
+  model: RegisterViewModel = { email: '', password: '', confirmPassword: '' }
+
+  constructor(/*private authService : AuthService*/) { }
 
   ngOnInit(): void {
   }
