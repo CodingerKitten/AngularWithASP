@@ -51,7 +51,6 @@ export class BannerComponent implements OnInit {
       }
     }, this.delta);
 
-    // Cleanup on component destroy
     return () => clearInterval(ticker);
   }
 }
