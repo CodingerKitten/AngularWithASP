@@ -20,9 +20,11 @@ export class LoginComponent implements OnInit {
       this.authService.login(this.model).subscribe({
         next: (response) => {
           console.log('Login successful', response);
+          alert('Login successful');
         },
         error: (error) => {
           console.error('Login failed', error);
+          alert('Login Unsuccessful, wrong crediantials')
         }
       });
     }
