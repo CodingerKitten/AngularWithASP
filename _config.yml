@@ -1,0 +1,10 @@
+# Minimal configuration settings
+title: .net_angular_fs
+baseurl: "" 
+url: "https://codingerkitten.github.io/AngularWithASP/"  # the base hostname & protocol for your site
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
