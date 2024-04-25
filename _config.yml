@@ -1,0 +1,10 @@
+# Minimal configuration settings
+title: Portfolio
+baseurl: "/AngularWithASP"  # the subpath of your site, e.g., "/blog" if applicable
+url:  "https://codingerkitten.github.io"  # the base hostname & protocol for your site
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
